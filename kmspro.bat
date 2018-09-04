@@ -35,7 +35,7 @@ echo.
 echo.	===== Windows 、Office KMS激活脚本 By: https://v0v.bid ｛兼容Win2016｝ =====
 echo.
 echo. --[1]--激活 Windows 系统 支持 Windows Vista/7/8/8.1/10  2008/2008R2/2012/2012R2/2016
-echo. --[2]--激活 Office 套件 支持 Office 2010/2013/2016
+echo. --[2]--激活 Office 套件 支持 Office 2010/2013/2016  Office365
 echo.
 echo. --[3]--卸载 Windows 系统 KMS激活
 echo. --[4]--卸载 Office 套件 KMS激活

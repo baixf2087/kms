@@ -23,7 +23,7 @@ echo     -- KMS 激活 widows 和 office 便捷脚本 --
 echo     -- 此脚本由 https://v0v.bid  提供支持 --
 echo.
 echo --[1]--激活 widows 系统（Windows 7、8、10、2008、2012、2016）
-echo --[2]--激活 office 软件（office 2010、2013、2016）
+echo --[2]--激活 office 软件（office 2010、2013、2016、office365）
 echo --[3]--退出脚本
 echo.
 echo.
