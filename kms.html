@@ -20,7 +20,7 @@
 <p>作用：激活 Windows 系统、激活 office 全套</p>
 
 <p>支持 Windows Vista/7/8/8.1/10 &nbsp; windows 2008/2008R2/2012/2012R2/2016</p>
-<p>支持 Office 2007/2010/2013/2016</p>
+<p>支持 Office 2010/2013/2016</p>
 
 <p>
 win10最新版微软官方下载地址：https://www.microsoft.com/zh-cn/software-download/windows10ISO/<br>
@@ -74,6 +74,8 @@ cscript ospp.vbs /sethst:kms.v0v.bid && cscript ospp.vbs /act
 </p>
 
 <p>
+更换或者安装KMS密钥（备用 密钥在下文）<br>
+cscript ospp.vbs /inpkey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX<br>
 查询Office激活详情（备用）<br>
 cscript ospp.vbs /dstatus
 </p>
@@ -185,11 +187,14 @@ cscript ospp.vbs /rearm<br>
 
 <h4>7.使用安卓手机自建 KMS 服务器（安卓手机 无需 Root）</h4>
 <p>
-1.下载本站提供的安卓版 KMS 服务器软件 <a href="./android.html" target="_blank" >点击下载</a><br>
-2.确保手机与需要激活的电脑连接同一 WIFI 网络(或同一局域网)，启动软件<br>
+1.下载并安装本站提供的安卓版 KMS 服务器软件 <a href="./android.html" target="_blank" >点击下载</a><br>
+2.确保手机与需要激活的电脑连接同一 WIFI 网络(或在同一局域网内)，启动软件<br>
 3.点击[启动服务器]，查看软件内显示的[IP地址]<br>
-4.使用如下代码即可激活你手机所在局域网内的所有Windows系统和office套件(注意替换为自己的IP地址)<br>
-命令提示符(管理员)：slmgr /skms 192.168.1.XXX && slmgr /ato<br><br>
+4.使用如下代码即可激活你手机所在局域网内的所有Windows系统和office套件(注意替换为自己的IP地址)<br><br>
+Windows 命令提示符(管理员)：<br>
+slmgr /skms 192.168.1.XXX && slmgr /ato<br><br>
+Office 命令提示符(管理员)进入安装目录：<br>
+cscript ospp.vbs /sethst:192.168.1.XXX && cscript ospp.vbs /act<br><br>
 
 如果你是企业IT管理员，是不是很酷呢！如果你懂得内网穿透和动态解析(需开放1688端口)，你的手机同样可以为全球提供 KMS激活服务。<br>
 另外，在没有 WIFI 的情况下，可以在设置内使用 WIFI热点、USB系绳等方式启动激活服务器。
