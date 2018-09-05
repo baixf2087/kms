@@ -61,13 +61,14 @@ slmgr /upk
 Office2010 默认安装目录<br>
 cd C:\Program Files (x86)\Microsoft Office\Office14<br>
 cd C:\Program Files\Microsoft Office\Office14<br><br>
+
 Office2013 默认安装目录<br>
 cd C:\Program Files (x86)\Microsoft Office\Office15<br>
 cd C:\Program Files\Microsoft Office\Office15<br><br>
+
 Office2016、Office365 默认安装目录<br>
 cd C:\Program Files (x86)\Microsoft Office\Office16<br>
 cd C:\Program Files\Microsoft Office\Office16<br><br>
-如果你不知道你的Office装在哪个目录，可以打开一个程序比如word，然后打开任务管理器右键选择“打开文件所在的位置”
 </p>
 
 <p>
@@ -79,7 +80,29 @@ cscript ospp.vbs /sethst:kms.v0v.bid && cscript ospp.vbs /act
 更换或者安装KMS密钥（备用 密钥在下文）<br>
 cscript ospp.vbs /inpkey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX<br>
 查询Office激活详情（备用）<br>
-cscript ospp.vbs /dstatus
+cscript ospp.vbs /dstatus<br>
+注意：RTL版Office需要转换为VOL版才能激活，一键转换脚本在下文
+</p>
+
+<h4>安装并激活Office365家庭版（以64位默认安装目录为例）</h4>
+
+<p>
+1.打开下面链接点击试用1个月按提示下载安装<br>
+https://products.office.com/zh-cn/try<br><br>
+
+2.打开命令提示符(管理员)执行以下命令进入安装目录<br>
+cd /d "%ProgramFiles%\Microsoft Office\Office16"<br><br>
+
+3.将Office365家庭版RTL版转换VOL版<br>
+for /f %%x in ('dir /b ..\root\Licenses16\proplusvl_kms*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x"<br>
+for /f %%x in ('dir /b ..\root\Licenses16\proplusvl_mak*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x"<br><br>
+
+4.安装KMS激活密钥<br>
+cscript ospp.vbs /inpkey:XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99<br><br>
+
+5.激活<br>
+cscript ospp.vbs /sethst:kms.v0v.bid && cscript ospp.vbs /act
+
 </p>
 
 <h4>3.激活说明</h4>
@@ -88,6 +111,7 @@ cscript ospp.vbs /dstatus
 KMS服务是微软针对大型企业设计的激活系统，KMS批量激活密钥广泛用于机房服务器操作系统和大型企业内部批量激活员工电脑，限企业内网使用。目前公开的KMS服务器封杀力度很大，为了节省大家的时间与精力，请低调使用，转载请注明：https://v0v.bid 。<br><br>
 KMS 激活有 180 天期限，此期限称为激活有效间隔。若要保持激活状态，您的系统必须通过至少每 180 天连接一次 KMS 服务器来续订激活。<br>
 默认情况下，系统每 7 天自动进行一次激活续订尝试。在续订客户端激活之后，激活有效间隔重新开始。<br><br>
+
 综上所述，只要您的电脑不超过 180 天以上无法连接互联网，就无需进行任何操作，系统会自行续期保持激活状态。即永久激活。
 </p>
 
