@@ -54,7 +54,7 @@ slmgr /upk
 
 <p>
 1.Cmd进入Office安装目录<br>
-打开命令提示符(管理员)执行以下命令进入安装目录(若Office安装在其他盘符，请自行将C改为对应盘符)<br>
+打开命令提示符(管理员)执行以下命令进入安装目录(若Office安装在其他盘符，请自行将C改为对应盘符)
 </p>
 
 <p>
@@ -68,7 +68,7 @@ cd C:\Program Files\Microsoft Office\Office15<br><br>
 
 Office2016、Office365 默认安装目录<br>
 cd C:\Program Files (x86)\Microsoft Office\Office16<br>
-cd C:\Program Files\Microsoft Office\Office16<br><br>
+cd C:\Program Files\Microsoft Office\Office16
 </p>
 
 <p>
@@ -94,8 +94,8 @@ https://products.office.com/zh-cn/try<br><br>
 cd /d "%ProgramFiles%\Microsoft Office\Office16"<br><br>
 
 3.将Office365家庭版RTL版转换VOL版<br>
-for /f %%x in ('dir /b ..\root\Licenses16\proplusvl_kms*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x"<br>
-for /f %%x in ('dir /b ..\root\Licenses16\proplusvl_mak*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x"<br><br>
+for /f %x in ('dir /b ..\root\Licenses16\proplusvl_kms*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%x"<br>
+for /f %x in ('dir /b ..\root\Licenses16\proplusvl_mak*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%x"<br><br>
 
 4.安装KMS激活密钥<br>
 cscript ospp.vbs /inpkey:XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99<br><br>
