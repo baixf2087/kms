@@ -24,23 +24,20 @@
 <p>支持 Office 2010/2013/2016 &nbsp; Office365</p>
 <p>本站支持激活的Windows和Office版本 共123个：<a href="./menu.txt" download="menu.txt">点击查看</a></p>
 
-<p>
-Windows10最新版微软官方下载地址：https://www.microsoft.com/zh-cn/software-download/windows10ISO/<br>
-请使用“手机” 访问按提示选择版本和语言获取iOS镜像下载链接（电脑直接访问会跳转到更新助手页面）
-</p>
+<p>Windows10最新版微软官方下载地址：https://www.microsoft.com/zh-cn/software-download/windows10ISO/</p>
+<p>请使用“手机” 访问按提示选择版本和语言获取iOS镜像下载链接（电脑直接访问会跳转到更新助手页面）</p>
 
 <h4>1.Windows 激活方法</h4>
 
 <p>
 1.打开 命令提示符(管理员)<br>
-2.执行以下命令
-</p>
+2.执行以下命令<br><br>
 
-<p>
 slmgr /skms kms.v0v.bid && slmgr /ato<br><br>
 
-如果激活失败使用命令提示符(管理员)执行以下命令更换密钥后重新激活（密钥在下文）<br>
-slmgr /ipk XXXXX-XXXXX-XXXXX-XXXXX-XXXXX<br><br>
+如激活失败尝试命令提示符(管理员)执行以下命令更换密钥后重新激活（密钥在下文）<br>
+slmgr /ipk XXXXX-XXXXX-XXXXX-XXXXX-XXXXX<br>
+注意：RTL版系统版本需要先转换为VOL版才能激活，方法在下文。<br><br>
 
 查看系统版本（备用）<br>
 wmic os get caption<br>
@@ -50,14 +47,24 @@ slmgr /dlv<br>
 slmgr /upk
 </p>
 
+<h4>Windows10家庭版（RTL版）升级为企业版（VOL版）：</h4>
+
+<p>
+1.使用 Win+i 快捷键打开「设置」- 点击「更新和安全」- 在左侧点击「激活」选项卡<br>
+2.点击右侧的「更改产品密钥按钮」，输入Key：NPPR9-FWDCX-D2C8J-H872K-2YT43<br>
+3.按提示升级完成后激活系统：<br>
+slmgr /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43<br>
+slmgr /skms kms.v0v.bid && slmgr /ato<br><br>
+
+同样的方法可以升级为专业版、教育版等，以及版本退回切换（政府版升级不可逆） 。升级Key可以在文末找到。
+</p>
+
 <h4>2.Office 激活方法</h4>
 
 <p>
 1.Cmd进入Office安装目录<br>
-打开命令提示符(管理员)执行以下命令进入安装目录(若Office安装在其他盘符，请自行将C改为对应盘符)
-</p>
+打开命令提示符(管理员)执行以下命令进入安装目录(若Office安装在其他盘符，请自行将C改为对应盘符)<br><br>
 
-<p>
 Office2010 默认安装目录<br>
 cd C:\Program Files (x86)\Microsoft Office\Office14<br>
 cd C:\Program Files\Microsoft Office\Office14<br><br>
@@ -68,23 +75,20 @@ cd C:\Program Files\Microsoft Office\Office15<br><br>
 
 Office2016、Office365 默认安装目录<br>
 cd C:\Program Files (x86)\Microsoft Office\Office16<br>
-cd C:\Program Files\Microsoft Office\Office16
-</p>
+cd C:\Program Files\Microsoft Office\Office16<br><br>
 
-<p>
 2.执行命令激活Office软件<br><br>
-cscript ospp.vbs /sethst:kms.v0v.bid && cscript ospp.vbs /act
-</p>
+cscript ospp.vbs /sethst:kms.v0v.bid && cscript ospp.vbs /act<br><br>
 
-<p>
-更换或者安装KMS密钥（备用 密钥在下文）<br>
+如激活失败尝试更换KMS密钥后重新激活（密钥在下文）<br>
 cscript ospp.vbs /inpkey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX<br>
+注意：RTL版Office需要转换为VOL版才能激活，一键转换脚本在下文。<br><br>
+
 查询Office激活详情（备用）<br>
-cscript ospp.vbs /dstatus<br>
-注意：RTL版Office需要转换为VOL版才能激活，一键转换脚本在下文
+cscript ospp.vbs /dstatus
 </p>
 
-<h4>安装并激活Office365家庭版（以64位默认安装目录为例）</h4>
+<h4>安装并激活Office365家庭版（以64位默认安装目录为例）：</h4>
 
 <p>
 1.打开下面链接点击试用1个月按提示下载安装<br>
@@ -102,7 +106,6 @@ cscript ospp.vbs /inpkey:XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99<br><br>
 
 5.激活<br>
 cscript ospp.vbs /sethst:kms.v0v.bid && cscript ospp.vbs /act
-
 </p>
 
 <h4>3.激活说明</h4>
@@ -112,43 +115,36 @@ KMS服务是微软针对大型企业设计的激活系统，KMS批量激活密�
 KMS 激活有 180 天期限，此期限称为激活有效间隔。若要保持激活状态，您的系统必须通过至少每 180 天连接一次 KMS 服务器来续订激活。<br>
 默认情况下，系统每 7 天自动进行一次激活续订尝试。在续订客户端激活之后，激活有效间隔重新开始。<br><br>
 
-综上所述，只要您的电脑不超过 180 天以上无法连接互联网，就无需进行任何操作，系统会自行续期保持激活状态。即永久激活。
-</p>
+综上所述，只要您的电脑不超过 180 天以上无法连接互联网，就无需进行任何操作，系统会自行续期保持激活状态。即永久激活。<br><br>
 
-<p>
 如若你无法保证半年内上一次网，或者你有心理上的强迫症。那么下拉本文，按提示将你的电脑升级为中国政府版。<br>
 你只需要保证 410年 连接一次互联网，即可永久使用正版的Windows10系统。
 </p>
 
+
+<h4>微软官方文档：</h4>
 <p>
-微软官方文档：<br>
 [Windows] https://docs.microsoft.com/zh-cn/windows-server/get-started/kmsclientkeys<br>
 [Windows] https://docs.microsoft.com/zh-cn/search/index?search=kms<br>
 [office2016] https://technet.microsoft.com/zh-cn/library/dn385360(v=office.16).aspx<br>
 [office2013] https://technet.microsoft.com/ZH-CN/library/dn385360.aspx<br>
-[office2010] https://technet.microsoft.com/ZH-CN/library/ee624355(v=office.14).aspx<br>
-<br>
+[office2010] https://technet.microsoft.com/ZH-CN/library/ee624355(v=office.14).aspx<br><br>
+
 [系统开源代码] https://github.com/Wind4/vlmcsd
 </p>
 
 <h4>4.Windows10 升级为政府版并激活410年</h4>
 
 <p>
-注意：中国政府版（Windows10神州网信政府版（CMGE））更新服务器位于中国境内，该版本移除或者禁用了原版Windows10中自带的办公类、个人助理类、娱乐生活类应用及基于云的服务（如：OneDrive,Windows Defender等），内置了中国政府指定数字证书机关的根证书。
-</p>
+注意：中国政府版（Windows10神州网信政府版（CMGE））更新服务器位于中国境内，该版本移除或者禁用了原版Windows10中自带的办公类、个人助理类、娱乐生活类应用及基于云的服务（如：OneDrive,Windows Defender等），内置了中国政府指定数字证书机关的根证书。<br><br>
 
-<p>
 1.升级。使用 Win+i 快捷键打开「设置」- 点击「更新和安全」- 在左侧点击「激活」选项卡<br>
-点击右侧的「更改产品密钥按钮」，输入key：YYVX9-NTFWV-6MDM3-9PT4T-4M68B
-</p>
+点击右侧的「更改产品密钥按钮」，输入key：YYVX9-NTFWV-6MDM3-9PT4T-4M68B<br><br>
 
-<p>
 2.激活。按提示升级后打开命令提示符(管理员)逐行执行以下命令：<br>
 slmgr /ipk YYVX9-NTFWV-6MDM3-9PT4T-4M68B<br>
-slmgr /skms kms.v0v.bid && slmg /ato
-</p>
+slmgr /skms kms.v0v.bid && slmg /ato<br><br>
 
-<p>
 执行以下命令查看KMS期限<br>
 slmgr /xpr
 </p>
@@ -168,6 +164,7 @@ win7:点开开始菜单，再点击所有应用（程序），在Windows系统�
 https://answers.microsoft.com/zh-hans/windows<br>
 0x80070005错误一般是你没用管理员权限运行CMD
 </p>
+
 <p>
 #检测KMS服务器运行状态<br>
 下载 <a href="./vlmcs.exe" download="vlmcs.exe">vlmcs.exe</a> 到C盘根目录后CMD执行以下命令：<br>
@@ -202,18 +199,16 @@ cscript ospp.vbs /rearm
 <h4>6.批处理 BAT 一键工具脚本（解压密码：https://v0v.bid）</h4>
 
 <p>
-#KMS服务器检测脚本 <a href="./check.zip" download="check.zip">点击下载</a>
-<br>
-#技术员KMS便捷脚本 <a href="./kms.zip" download="kms.zip">点击下载</a>
-<br>
-#便捷KMS一键激活脚本 <a href="./kmspro.zip" download="kmspro.zip">点击下载</a>
-<br>
+#KMS服务器检测脚本 <a href="./check.zip" download="check.zip">点击下载</a><br>
+#技术员KMS便捷脚本 <a href="./kms.zip" download="kms.zip">点击下载</a><br>
+#便捷KMS一键激活脚本 <a href="./kmspro.zip" download="kmspro.zip">点击下载</a><br>
 #Office全系列RTL版转换VOL版（包括Office365家庭版/个人版/学生版）<a href="./office.zip" download="office.zip">点击下载</a>
 </p>
 
 <h4>[脚本问题反馈]&nbsp;&nbsp;<a href="https://github.com/dylanbai8/kmspro/issues" target="_blank" >点我反馈</a></h4>
 
 <h4>7.使用安卓手机自建 KMS 服务器（安卓手机 无需 Root）</h4>
+
 <p>
 1.下载并安装本站提供的安卓版 KMS 服务器软件 <a href="./android.html" target="_blank" >点击下载</a><br>
 2.确保手机与需要激活的电脑连接同一 WIFI 网络(或在同一局域网内)，启动软件<br>
@@ -245,24 +240,15 @@ KMS服务是所有VOL版系统的激活方式。零售版（RTL版）可通过�
 slmgr /dlv<br>
 在“描述”这一行内有 VOLUME 字样就是VOL版。就是支持KMS激活。<br><br>
 
-Windows10所有版本（包括家庭版）支持直接KMS激活，无需升级版本。<br><br>
+Windows10所有版本（包括家庭版）支持直接KMS激活，无需升级版本。
 
-Windows10家庭版升级为企业版：<br><br>
-
-1.使用 Win+i 快捷键打开「设置」- 点击「更新和安全」- 在左侧点击「激活」选项卡<br>
-2.点击右侧的「更改产品密钥按钮」，输入Key：NPPR9-FWDCX-D2C8J-H872K-2YT43<br>
-3.按提示升级，重启系统即可。<br>
-6.升级完成后激活系统：<br>
-slmgr /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43<br>
-slmgr /skms kms.v0v.bid && slmgr /ato<br><br>
-
-同样的方法可以升级为专业版、教育版等，以及版本退回切换（政府版升级不可逆） 。升级Key可以在文末找到。
 </p>
 
 <h4>已永久激活的：</h4>
 
 <p>
-已通过数字许可证或者其它方式永久激活的系统，执行 KMS 激活命令不会影响和改变系统激活状态。
+已通过数字许可证或者其它方式永久激活的系统，执行 KMS 激活命令不会影响和改变系统激活状态。<br>
+注意：更换Key或者切换系统版本会导致失去原先激活状态！恢复方法为“先用命令行清除密钥卸载KMS激活，回到未激活状态。然后使用激活疑难解答”。
 </p>
 
 <h4>KMS 激活的安全性：</h4>
